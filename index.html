@@ -218,7 +218,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -230,6 +230,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/04/13/day2/" class="title">day2</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-04-13T07:16:13.000Z" itemprop="datePublished">2020-04-13</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -257,93 +272,63 @@
   
   <main class="main" role="main">
   
-  
-    <div class="content">
-  <article id="post-day1" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="content article-list">
     
-    <div class="article-header">
-      
-        
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/13/day2/">day2</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/04/13/day2/" class="article-date">
+	  <time datetime="2020-04-13T07:16:13.000Z" itemprop="datePublished">4月 13</time>
+	</a>
+</span>
+    
+    
+
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/04/13/day2/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
   
     <h1 itemprop="name">
       <a class="article-title" href="/2020/04/12/day1/">day1</a>
     </h1>
   
 
-      
-      <div class="article-meta">
-        <span class="article-date">
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="/2020/04/12/day1/" class="article-date">
-	  <time datetime="2020-04-12T13:26:01.000Z" itemprop="datePublished">2020-04-12</time>
+	  <time datetime="2020-04-12T13:26:01.000Z" itemprop="datePublished">4月 12</time>
 	</a>
 </span>
-        
-        
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/04/12/day1/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p>#Kali Linux 扫描技术</p>
-<h2 id="1-信息收集"><a href="#1-信息收集" class="headerlink" title="1. 信息收集"></a>1. 信息收集</h2><h3 id="1-1-发现主机"><a href="#1-1-发现主机" class="headerlink" title="1.1 发现主机"></a>1.1 发现主机</h3><p>‘’’<br>IP地址：（ Internet Protocol Address），是一个32位二进制。<br>IP分为网络地址和主机地址。A类：（1.0.0.0<del>126.0.0.0），B类（128.1.0.0</del>191.255.0.0），C类（192.0.1.0~223.255.255.0）。<br>‘’’</p>
-<h4 id="1-1-1Netmask-CIDR转换"><a href="#1-1-1Netmask-CIDR转换" class="headerlink" title="1.1.1Netmask/CIDR转换"></a>1.1.1Netmask/CIDR转换</h4><p>‘’’<br>netmask -C 192.168.1.0:192.168.1.255</p>
-<p>‘’’</p>
-<h4 id="1-1-2网络拓扑绘制"><a href="#1-1-2网络拓扑绘制" class="headerlink" title="1.1.2网络拓扑绘制"></a>1.1.2网络拓扑绘制</h4><p>‘’’<br>路由跟踪。<br>traceroute ip<br>‘’’</p>
-<h4 id="1-1-3扫码主机"><a href="#1-1-3扫码主机" class="headerlink" title="1.1.3扫码主机"></a>1.1.3扫码主机</h4><pre><code>NMAP是一个强大的网络扫描工具，三个基本功能：1.探测主机在线。2.端口扫描。3.推断主机所用的操作系统。</code></pre><p>‘’’<br>1.ping扫描<br>  nmap-sP ip地址/网段<br>  快速获取存活状态和开放的端口<br>2.ARP主动扫描<br>netdiscover -r ip地址/网段<br>‘’’</p>
-<h4 id="1-1-4监听主机"><a href="#1-1-4监听主机" class="headerlink" title="1.1.4监听主机"></a>1.1.4监听主机</h4><pre><code>监听：不主动的向目标主机发送数据包，仅监听网络中的数据包。因为ARP/DHCP都会进行网络广播。</code></pre><p>‘’’<br>1.ARP监听<br> netdiscover -p<br>2.DHCP监听<br> nmap -script broadcast-dhcp-discover<br>‘’’</p>
-<h3 id="1-2域名分析"><a href="#1-2域名分析" class="headerlink" title="1.2域名分析"></a>1.2域名分析</h3><pre><code>域名：是由一串用点分隔的名字，用来表示网络上某一台计算机的电子方位，IP--域名。域名可以获取到：域名所有者信息、子域名、服务器地址。</code></pre><h4 id="1-2-1域名基本信息"><a href="#1-2-1域名基本信息" class="headerlink" title="1.2.1域名基本信息"></a>1.2.1域名基本信息</h4><p>‘’’<br>1.whois 工具<br>whois 域名<br>2.dmitry一体化信息收集<br>dmitry -w domain<br>‘’’</p>
-<h4 id="1-2-2子域名信息"><a href="#1-2-2子域名信息" class="headerlink" title="1.2.2子域名信息"></a>1.2.2子域名信息</h4><p>‘’’<br>1.Netcraft子域名查询<br><a href="https://searchdna.netcraft.com/" target="_blank" rel="noopener">https://searchdna.netcraft.com/</a><br>2.fierce子域名查询<br>fierce -dns 域名 -threads 100<br>‘’’</p>
-<h4 id="1-2-3服务器信息"><a href="#1-2-3服务器信息" class="headerlink" title="1.2.3服务器信息"></a>1.2.3服务器信息</h4><p>‘’’<br>1.同IP网站查询<br>IP反查<br><a href="http://tool.chinaz.com/Same/" target="_blank" rel="noopener">http://tool.chinaz.com/Same/</a><br><a href="https://dns.aizhan.com/" target="_blank" rel="noopener">https://dns.aizhan.com/</a><br>2.绕过CDN查询真实IP<br>站长工具ping检测<br>超级ping<br>‘’’</p>
-<h3 id="1-3端口扫描"><a href="#1-3端口扫描" class="headerlink" title="1.3端口扫描"></a>1.3端口扫描</h3><pre><code>每个应用的网络层，想要发送数据</code></pre><p>‘’’<br>1.IP扫描<br>nmap IP地址<br>2.查看更多信息<br>nmap -v IP地址<br>3.扫描多台<br>nmap IP地址 IP地址<br>nmap 192.168.1.1,2,3<br>4.从文件中读取扫描<br>nmap -il list.txt<br>‘’’</p>
-<h3 id="1-4操作系统识别"><a href="#1-4操作系统识别" class="headerlink" title="1.4操作系统识别"></a>1.4操作系统识别</h3><p>‘’’<br>1.系统信息 和路由跟踪<br>nmap -A ip<br>2.识别操作系统<br>nmap -O ip<br>‘’’</p>
-<h3 id="1-5-软件版本探测"><a href="#1-5-软件版本探测" class="headerlink" title="1.5 软件版本探测"></a>1.5 软件版本探测</h3><p>‘’’</p>
-
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
     
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="https://zhengtao2020.github.io/2020/04/12/day1/" title="day1" target="_blank" rel="external">https://zhengtao2020.github.io/2020/04/12/day1/</a>
-    </li>
     
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
 
+    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/04/12/day1/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
 
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/zhengtao2020" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/zhengtao2020" target="_blank"><span class="text-dark">记忆@</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
-        <div>个人简介。</div>
-      </div>
-    </figure>
+    
   </div>
-</div>
-
-
-    </div>
-  </article>
-  
-</div>
-
-  
 
    
 </main>

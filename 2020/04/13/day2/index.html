@@ -17,18 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签 | Zhengtao学习网站</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://zhengtao2020.github.io/tags/index.html">
+  <title>day2 | Zhengtao学习网站</title>
+  <meta name="description" content="WEB 安全总结11.理解HIIP请求流程从web2.0开始，互联网从传统的C&#x2F;S转化为B&#x2F;S架构。当客户端和服务器进行交互时，就存在web请求，这种请求就是基于统一的应用层协议(HTTP协议)交互数据。1.1HTTP协议解析HTTP(超文本传输协议)，他规定了万维网服务器和客户端之间的通信规则。他允许服务器将HTML文档发送到客户端的web浏览器中。1.1.1发起HTTP请求‘’’1.curl发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="day2">
+<meta property="og:url" content="https://zhengtao2020.github.io/2020/04/13/day2/index.html">
 <meta property="og:site_name" content="zhengtao博客">
+<meta property="og:description" content="WEB 安全总结11.理解HIIP请求流程从web2.0开始，互联网从传统的C&#x2F;S转化为B&#x2F;S架构。当客户端和服务器进行交互时，就存在web请求，这种请求就是基于统一的应用层协议(HTTP协议)交互数据。1.1HTTP协议解析HTTP(超文本传输协议)，他规定了万维网服务器和客户端之间的通信规则。他允许服务器将HTML文档发送到客户端的web浏览器中。1.1.1发起HTTP请求‘’’1.curl发">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-12T07:30:50.096Z">
-<meta property="article:modified_time" content="2020-04-12T07:30:50.096Z">
+<meta property="article:published_time" content="2020-04-13T07:16:13.000Z">
+<meta property="article:modified_time" content="2020-04-13T13:32:33.653Z">
 <meta property="article:author" content="ZhengTao">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://zhengtao2020.github.io/tags/index.html">
+  <link rel="canonical" href="https://zhengtao2020.github.io/2020/04/13/day2/index.html">
   
     <link rel="alternate" href="/atom.xml" title="zhengtao博客" type="application/atom+xml">
   
@@ -272,23 +274,118 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签</h1>
-      <p class="text-muted hidden-xs">共 0 个标签</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-day2" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      day2
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/04/13/day2/" class="article-date">
+	  <time datetime="2020-04-13T07:16:13.000Z" itemprop="datePublished">2020-04-13</time>
+	</a>
+</span>
+        
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/04/13/day2/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="WEB-安全总结1"><a href="#WEB-安全总结1" class="headerlink" title="WEB 安全总结1"></a>WEB 安全总结1</h1><h2 id="1-理解HIIP请求流程"><a href="#1-理解HIIP请求流程" class="headerlink" title="1.理解HIIP请求流程"></a>1.理解HIIP请求流程</h2><pre><code>从web2.0开始，互联网从传统的C/S转化为B/S架构。当客户端和服务器进行交互时，就存在web请求，这种请求就是基于统一的应用层协议(HTTP协议)交互数据。</code></pre><h3 id="1-1HTTP协议解析"><a href="#1-1HTTP协议解析" class="headerlink" title="1.1HTTP协议解析"></a>1.1HTTP协议解析</h3><pre><code>HTTP(超文本传输协议)，他规定了万维网服务器和客户端之间的通信规则。他允许服务器将HTML文档发送到客户端的web浏览器中。</code></pre><h4 id="1-1-1发起HTTP请求"><a href="#1-1-1发起HTTP请求" class="headerlink" title="1.1.1发起HTTP请求"></a>1.1.1发起HTTP请求</h4><p>‘’’<br>1.curl发起一个HTTP请求。<br>curl 网址 -H ‘’ -d ‘{}’<br>2.postman 接口测试<br>3.请求与响应<br>HTTP请求：request</p>
+<p>HTTP响应：response<br>4.请求方法<br>    GET<br>    POST<br>    HEAD<br>    PUT<br>    DELETE<br>    TRACE<br>    CONNECT<br>    OPTIONS<br>5.HTTP状态码<br>1XX：消息以被成功接收，继续处理，范围100-101；<br>2XX：表示成功，服务器成功处理请求，范围200-206；<br>3XX：重定向，范围300-305；<br>4XX：客户端错误状态码，范围400-415；<br>5XX：web服务器自身出错或者网站挂了。范围500-505.<br>‘’’</p>
+<h4 id="1-1-2HTTP与HTTPS的区别"><a href="#1-1-2HTTP与HTTPS的区别" class="headerlink" title="1.1.2HTTP与HTTPS的区别"></a>1.1.2HTTP与HTTPS的区别</h4><pre><code>HTTP使用80端口，HTTPS使用443端口。
+HTTP不需要，HTTPS需要CA证书。
+HTTP连接相对简单，无状态。HTTPS是由SSL+HTTP来进行加密传输，身份认证的网络协议。</code></pre><h3 id="1-2截取HTTP请求"><a href="#1-2截取HTTP请求" class="headerlink" title="1.2截取HTTP请求"></a>1.2截取HTTP请求</h3><pre><code>1.Fiddler是一个优秀的web调试工具，他可以记录所有的浏览器与服务器之间通信信息(HTTP/HTTPS),并且允许你设置断点，修改输入输出结果。</code></pre><p>‘’’<br>1.会话列表<br>2.request信息<br>3.response信息<br>4.命令行<br>    1.cls清除会话列表<br>    2.select 选择会话<br>    3.bup 截取会话<br>5.过滤器 filters<br>    1.Zone外网、内网过滤<br>    2.HOST域名过滤<br>    3.client 指定客户端抓取<br>6.断点<br>    1.全局断点<br>    2.指定HOST断点<br>    3.request-before<br>    4.response-after<br>7.Winsock Expert也是一个用来监视和修改网络发送、接收数据的一个程序。可以用来帮助渗透人员调试网络安全。<br>‘’’</p>
+<h3 id="1-3-HTTP应用：黑帽SEO–搜索引擎劫持"><a href="#1-3-HTTP应用：黑帽SEO–搜索引擎劫持" class="headerlink" title="1.3 HTTP应用：黑帽SEO–搜索引擎劫持"></a>1.3 HTTP应用：黑帽SEO–搜索引擎劫持</h3><p>‘’’<br>   SEO（搜索引擎优化），简单的说就是让网站排名更高。<br>   黑帽SEO就是通过作弊的手段欺骗搜索引擎，获取非正常的排名，让网站更靠前。<br>   黑客通过入侵排名靠前的网站，在其内部偷偷的挂友情链接（黑链），从而获得更高的排名。<br>   搜索引擎劫持：是通过域名可以正常访问到自己的站点，但通过百度谷歌等搜索引擎就会跳到其他网站。<br>   通过HTTP请求的Referer，user-agent来进行劫持。<br>‘’’ </p>
+
       
     </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://zhengtao2020.github.io/2020/04/13/day2/" title="day2" target="_blank" rel="external">https://zhengtao2020.github.io/2020/04/13/day2/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/zhengtao2020" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/zhengtao2020" target="_blank"><span class="text-dark">记忆@</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2020/04/12/day1/" title="day1"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -345,6 +442,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
